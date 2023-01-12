@@ -59,7 +59,7 @@ jobs:
           tag: "${{ steps.config.outputs.kernel_name }}"
           token: ${{ secrets.GITHUB_TOKEN }}
       
-      - name: Upload GSI to WeTransfer
+      - name: Upload boot to WeTransfer
         run: |
               cd $GITHUB_WORKSPACE/kernel/out/arch/arm64/boot
               curl -sL https://git.io/file-transfer | sh
