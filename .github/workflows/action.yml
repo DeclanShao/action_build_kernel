@@ -44,6 +44,8 @@ jobs:
           tar -xvJf gcc-arm-10.3-2021.07-x86_64-arm-none-eabi.tar.xz -C tool
           mv tool/gcc-arm-10.3-2021.07-x86_64-aarch64-none-linux-gnu tool/aarch
           mv tool/gcc-arm-10.3-2021.07-x86_64-arm-none-eabi tool/arm
+          git clone https://github.com/crdroidandroid/android_prebuilts_clang_host_linux-x86_clang-6443078.git --depth=1
+          mv android_prebuilts_clang_host_linux-x86_clang-6443078 clang
           sh -c "$(curl -sSL https://github.com/akhilnarang/scripts/raw/master/setup/android_build_env.sh/)"
 
       - name: Make kernel
