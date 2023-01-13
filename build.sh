@@ -8,6 +8,6 @@ rm -rf $KERNEL_PATH/out/ *.zip
 make mrproper && git reset --hard HEAD
 
 echo "=========================make========================="
-make O=out tb8704_defconfig
+make O=out mido_defconfig
 make O=out
 
