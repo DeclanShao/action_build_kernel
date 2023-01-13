@@ -51,13 +51,6 @@ jobs:
           cd $GITHUB_WORKSPACE/kernel
           bash ./build.sh
 
-      - name: Upload to Release
-        uses: ncipollo/release-action@v1
-        with:
-          artifacts: "kernel/out/arch/arm64/boot/Image.gz-dtb"
-          tag: "${{ steps.config.outputs.kernel_name }}"
-          token: ${{ secrets.GITHUB_TOKEN }}
-      
       - name: Upload boot to WeTransfer
         run: |
               cd $GITHUB_WORKSPACE/kernel/out/arch/arm64/boot
