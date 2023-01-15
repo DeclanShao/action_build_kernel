@@ -37,7 +37,9 @@ jobs:
       - name: Download gcc 
         run: |
            cd $GITHUB_WORKSPACE/kernel
-           git clone --depth=1 https://gitlab.com/jjpprrrr/prelude-clang.git prelude-clang
+           mkdir tool
+           git clone https://github.com/LineageOS/android_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-4.9 -b lineage-18.1 tool/aarch
+           git clone https://github.com/LineageOS/android_prebuilts_gcc_linux-x86_arm_arm-linux-androideabi-4.9 -b lineage-18.1 tool/arm
 #          cd $GITHUB_WORKSPACE/kernel
 #          wget https://developer.arm.com/-/media/Files/downloads/gnu-a/10.3-2021.07/binrel/gcc-arm-10.3-2021.07-x86_64-aarch64-none-linux-gnu.tar.xz
 #          wget https://developer.arm.com/-/media/Files/downloads/gnu-a/10.3-2021.07/binrel/gcc-arm-10.3-2021.07-x86_64-arm-none-eabi.tar.xz
