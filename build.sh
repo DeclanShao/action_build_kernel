@@ -1,5 +1,3 @@
-sed -i "s/MEIZU_M1721/LENOVO_TB8704/g" `grep -rl "MEIZU_M1721" ./`
-
 echo "===================Setup Export========================="
 export ARCH=arm64
 export SUBARCH=arm64
