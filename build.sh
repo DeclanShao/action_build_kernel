@@ -9,6 +9,6 @@ rm -rf $KERNEL_PATH/out/ *.zip
 make mrproper && git reset --hard HEAD
 
 echo "=========================make========================="
-make O=out CLANG_TRIPLE=aarch64-linux-gnu- CC=$GITHUB_WORKSPACE/kernel/tool/clang/bin/clang tb8704_defconfig
-make O=out
+make O=out tb8704_defconfig
+make -j8 O=out
 
