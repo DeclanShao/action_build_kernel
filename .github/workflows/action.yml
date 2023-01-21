@@ -37,8 +37,7 @@ jobs:
       - name: Download gcc 
         run: |
            cd $GITHUB_WORKSPACE/kernel
-           mkdir tool
-           git clone https://github.com/Aquarius223/google_clang_kernel_compiler.git --depth=1 tool/clang         
+           mkdir tool     
            wget https://developer.arm.com/-/media/Files/downloads/gnu-a/10.3-2021.07/binrel/gcc-arm-10.3-2021.07-x86_64-aarch64-none-linux-gnu.tar.xz
            wget https://developer.arm.com/-/media/Files/downloads/gnu-a/10.3-2021.07/binrel/gcc-arm-10.3-2021.07-x86_64-arm-none-eabi.tar.xz
            tar -xvJf gcc-arm-10.3-2021.07-x86_64-aarch64-none-linux-gnu.tar.xz -C tool
