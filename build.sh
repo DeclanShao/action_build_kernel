@@ -9,6 +9,6 @@ rm -rf $KERNEL_PATH/out/ *.zip
 make mrproper && git reset --hard HEAD
 
 echo "=========================make========================="
-make O=out rmx1971_chen_defconfig
+make O=out tb8704_defconfig
 make -j8 O=out
 
